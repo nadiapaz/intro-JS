@@ -25,8 +25,37 @@ Para la solución puedes inspirarte en: https://codepen.io/gabrieleromanato/pen/
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
   </head>
   <body>
+	<div id="gallery">
+  		<figure>
+  			<img src="http://lorempixel.com/400/200/animals/" alt="">
+  			<figcaption></figcaption>
+  		</figure>
+  		<figure>
+  			<img src="http://lorempixel.com/400/200/city/" alt="">
+  			<figcaption></figcaption>
+  		</figure>
+  		<figure>
+  			<img src="http://lorempixel.com/400/200/people/" alt="">
+  			<figcaption></figcaption>
+  		</figure>
+	</div> 
 
+	<!-- Mi script -->
+	<script>
+    $(function() {
+    $( "img", "#gallery" ).on( "contextmenu", function( e ) {
+        e.preventDefault();
+        $( "figcaption", "#gallery" ).text( "" );
+        $( this ).next().text( $( this ).attr( "" ) );
+        alert("imágenes con derecho de autor y que no se pueden descargar sin el consentimiento del autor");
+    });
+});	
+    </script>
   </body>
 </html>
