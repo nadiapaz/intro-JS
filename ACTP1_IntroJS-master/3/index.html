@@ -14,9 +14,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   </head>
   <body>
     <h1> Hey !! </h1>
+    
     <section class="section-1">
       <h1> Hey </h1>
       <span class="counter"> 101 </span>
@@ -62,5 +64,38 @@
 
       </fieldset>
     </form>
+    
+    <!-- los cambios-->
+    <style>
+      .section-1{
+        background-color: yellow;
+      }
+
+      {
+        background-color: grey;
+        transition: 1s;
+      }
+    </style>
+
+  <script>
+  $("h1").css("color", "red"); ("font-size:4em");
+  $("#row-3").on("click", function(){
+  $("#row-3").css( "background-color", "gray");
+  $("#row-3").css("transition: 1s");
+
+  $(".counter").on("click",function(){
+    counter = $(".counter").text();
+    counter = parseInt(counter);
+    $(".counter").text(counter+10);
+
+  });
+
+  });
+  $(".section-1 > h1").css("font-size", "4em");
+  $("tr:last").css("background-color", "red");
+</script>
+
+    
+
   </body>
 </html>
